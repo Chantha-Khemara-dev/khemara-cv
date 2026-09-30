@@ -1,0 +1,267 @@
+/* ================= Chantha Khemara — CV ================= */
+
+:root {
+    --accent: #2563eb;
+    --accent-dark: #1d4ed8;
+    --accent-soft: #eff6ff;
+    --heading: #0f172a;
+    --text: #334155;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    --bg: #f1f5f9;
+    --card: #ffffff;
+    --radius: 14px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 48px 16px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 15.5px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+}
+
+.cv {
+    max-width: 860px;
+    margin: 0 auto;
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    overflow: hidden;
+}
+
+/* ---------- Header ---------- */
+
+.cv-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 24px;
+    padding: 40px 48px;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+    color: #fff;
+}
+
+.cv-header .photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255, 255, 255, 0.85);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+    background: #fff;
+}
+
+.identity {
+    flex: 1 1 320px;
+}
+
+.identity h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.identity .title {
+    margin: 6px 0 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.contact {
+    flex: 0 1 auto;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 0.92rem;
+}
+
+.contact li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    word-break: break-word;
+}
+
+.contact a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Body sections ---------- */
+
+.cv-body {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 40px 48px;
+}
+
+section h2 {
+    margin: 0 0 16px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-dark);
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--line);
+}
+
+/* ---------- Skills ---------- */
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.skills li {
+    background: var(--accent-soft);
+    color: var(--accent-dark);
+    border: 1px solid #bfdbfe;
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+/* ---------- Entries (education / experience) ---------- */
+
+.entry {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 24px;
+}
+
+.entry:last-child {
+    margin-bottom: 0;
+}
+
+.entry::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--accent);
+}
+
+.entry::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 20px;
+    bottom: -18px;
+    width: 2px;
+    background: var(--line);
+}
+
+.entry:last-child::after {
+    display: none;
+}
+
+.entry h3 {
+    margin: 0;
+    font-size: 1.02rem;
+    font-weight: 700;
+    color: var(--heading);
+}
+
+.entry .meta {
+    margin: 2px 0 8px;
+    font-size: 0.88rem;
+    color: var(--muted);
+    font-style: italic;
+}
+
+.entry ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.entry ul li {
+    margin-bottom: 4px;
+}
+
+.entry .stack {
+    margin: 8px 0 0;
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
+.entry .stack b {
+    color: var(--text);
+}
+
+/* ---------- Footer ---------- */
+
+.cv-footer {
+    padding: 18px 48px;
+    background: var(--accent-soft);
+    border-top: 1px solid var(--line);
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 640px) {
+    body {
+        padding: 16px 8px;
+    }
+
+    .cv-header,
+    .cv-body,
+    .cv-footer {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    .cv-header {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .identity h1 {
+        font-size: 1.55rem;
+    }
+}
+
+/* ---------- Print ---------- */
+
+@media print {
+    body {
+        background: #fff;
+        padding: 0;
+    }
+
+    .cv {
+        box-shadow: none;
+        border-radius: 0;
+    }
+}

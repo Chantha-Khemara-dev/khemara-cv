@@ -2,83 +2,96 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Chantha Khemara - CV</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- ប្រើតារាង align="center" ដើម្បីឱ្យទំព័រទាំងមូលនៅចំកណ្ដាល -->
-    <table align="center" width="800" border="0" cellpadding="0" cellspacing="0">
-        <tr>
-            <td align="left">
+    <main class="cv">
 
-                <!-- ឈ្មោះខាងលើ -->
-                <h1>CHANTHA KHEMARA</h1>
-                <hr>
+        <!-- Header: name, title, contact info and photo -->
+        <header class="cv-header">
+            <img class="photo" src="pasted file.jpg" alt="Profile Picture">
+            <div class="identity">
+                <h1>Chantha Khemara</h1>
+                <p class="title">IT Support Intern</p>
+            </div>
+            <ul class="contact">
+                <li>Boeng Salang, Toul Kork, Phnom Penh</li>
+                <li><a href="tel:0888631805">0888631805</a></li>
+                <li><a href="mailto:chanthakhemara12@gmail.com">chanthakhemara12@gmail.com</a></li>
+            </ul>
+        </header>
 
-                <!-- តារាងប្លង់ក្បាលទំព័រ (ព័ត៌មានទំនាក់ទំនងនៅឆ្វេង និងរូបថតនៅស្តាំ) -->
-                <table width="100%" border="0" cellpadding="0" cellspacing="0">
-                    <tr>
-                        <td valign="top" width="70%">
-                            <h2><font color="green">IT Support Intern</font></h2>
-                            <p>
-                                Boeng Salang, Toul Kork, Phnom Penh<br>
-                                0888631805<br>
-                                chanthakhemara12@gmail.com
-                            </p>
-                        </td>
-                        <td valign="top" align="right" width="30%">
-                            <img src="pasted file.jpg" alt="Profile Picture" width="150">
-                        </td>
-                    </tr>
-                </table>
+        <div class="cv-body">
 
-                <br>
-
-                <!-- ផ្នែក Skills -->
-                <h2><font color="green">Skills</font></h2>
-                <p>
-                    PC/Laptop Repair, Printer Setup, OS Installation (Windows/Linux), UTP Cabling & Testing, LAN/Wi-Fi, TCP/IP, Troubleshooting & Diagnostics, MS Office, Git, Bash
-                </p>
-
-                <!-- ផ្នែក Education -->
-                <h2><font color="green">Education</font></h2>
-
-                <p><b><font color="blue">Royal University of Phnom Penh - Bachelor of Information Technology</font></b></p>
-                <p>2024 to 2028 (Expected)</p>
-                <p>Current Status: 3rd Year Student (Semester 1)</p>
-
-                <p><b><font color="blue">Hun Sen Preak Achi High School - High School Diploma (Bac II)</font></b></p>
-                <p>Graduated: 2024</p>
-                <p>Location: Tbong Khmum</p>
-
-                <!-- ផ្នែក Experience / Projects -->
-                <h2><font color="green">Experience & Projects</font></h2>
-
-                <p><b><font color="blue">Flame Crust (Pizza Ordering & Admin Platform) - Frontend / Full Stack</font></b></p>
-                <p>2024 to Present</p>
-                <ul>
-                    <li>Developed responsive ordering UI and back-office admin dashboard using React and Tailwind CSS.</li>
-                    <li>Built secure backend RESTful APIs using Java Spring Boot connected to MySQL.</li>
-                    <li>Integrated Bakong KHQR payment gateway and CI/CD deployment to Alibaba Cloud ECS.</li>
+            <!-- Skills -->
+            <section>
+                <h2>Skills</h2>
+                <ul class="skills">
+                    <li>PC/Laptop Repair</li>
+                    <li>Printer Setup</li>
+                    <li>OS Installation (Windows/Linux)</li>
+                    <li>UTP Cabling &amp; Testing</li>
+                    <li>LAN/Wi-Fi</li>
+                    <li>TCP/IP</li>
+                    <li>Troubleshooting &amp; Diagnostics</li>
+                    <li>MS Office</li>
+                    <li>Git</li>
+                    <li>Bash</li>
                 </ul>
-                <p><b>Skills:</b> React, Vite, Java Spring Boot, MySQL, REST API, Git, CI/CD</p>
+            </section>
 
-                <p><b><font color="blue">Windows & Linux Boot Setup Support - IT Support</font></b></p>
-                <p>Practical Experience</p>
-                <ul>
-                    <li>Skilled in installing and configuring Windows 11 and Linux environments.</li>
-                    <li>Managed dual-boot system configurations and disk partition setups.</li>
-                    <li>Resolved boot errors, system maintenance, and driver troubleshooting.</li>
-                </ul>
-                <p><b>Skills:</b> OS Deployment, System Maintenance, Dual-boot, Troubleshooting</p>
+            <!-- Education -->
+            <section>
+                <h2>Education</h2>
 
-                <hr>
-                <!-- ផ្នែក Footer -->
-                <p align="center">Copyright &copy; 2026 by Chantha Khemara. All rights reserved.</p>
+                <article class="entry">
+                    <h3>Royal University of Phnom Penh — Bachelor of Information Technology</h3>
+                    <p class="meta">2024 to 2028 (Expected) · Current Status: 3rd Year Student (Semester 1)</p>
+                </article>
 
-            </td>
-        </tr>
-    </table>
+                <article class="entry">
+                    <h3>Hun Sen Preak Achi High School — High School Diploma (Bac II)</h3>
+                    <p class="meta">Graduated: 2024 · Location: Tbong Khmum</p>
+                </article>
+            </section>
+
+            <!-- Experience / Projects -->
+            <section>
+                <h2>Experience &amp; Projects</h2>
+
+                <article class="entry">
+                    <h3>Flame Crust (Pizza Ordering &amp; Admin Platform) — Frontend / Full Stack</h3>
+                    <p class="meta">2024 to Present</p>
+                    <ul>
+                        <li>Developed responsive ordering UI and back-office admin dashboard using React and Tailwind CSS.</li>
+                        <li>Built secure backend RESTful APIs using Java Spring Boot connected to MySQL.</li>
+                        <li>Integrated Bakong KHQR payment gateway and CI/CD deployment to Alibaba Cloud ECS.</li>
+                    </ul>
+                    <p class="stack"><b>Skills:</b> React, Vite, Java Spring Boot, MySQL, REST API, Git, CI/CD</p>
+                </article>
+
+                <article class="entry">
+                    <h3>Windows &amp; Linux Boot Setup Support — IT Support</h3>
+                    <p class="meta">Practical Experience</p>
+                    <ul>
+                        <li>Skilled in installing and configuring Windows 11 and Linux environments.</li>
+                        <li>Managed dual-boot system configurations and disk partition setups.</li>
+                        <li>Resolved boot errors, system maintenance, and driver troubleshooting.</li>
+                    </ul>
+                    <p class="stack"><b>Skills:</b> OS Deployment, System Maintenance, Dual-boot, Troubleshooting</p>
+                </article>
+            </section>
+
+        </div>
+
+        <footer class="cv-footer">
+            <p>Copyright &copy; 2026 by Chantha Khemara. All rights reserved.</p>
+        </footer>
+
+    </main>
 
 </body>
 </html>
